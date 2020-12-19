@@ -1,0 +1,66 @@
+<html>
+<head>
+<style>
+body{
+  background:navy;
+  color:white;
+
+}
+th{
+      border:2px solid firebrick;
+    }
+	 td{
+      border:2px solid firebrick;
+    }
+   table{
+      border:2px solid red;
+	  width:80%;
+	  background:linear-gradient(to right, red,purple);
+    }
+
+
+
+</style>
+</head>
+<body>
+<table align="center">
+<h1 align="center">Розробники ігор</h1>
+<tr>
+       <th>Назва компанії</th>
+	   <th>Ігри компаній</th>
+
+
+</tr>
+<tr>
+       <td rowspan="3">Ubisoft</td>
+	   <td>Assasin's Creed</td>
+
+
+
+</tr>
+     <tr>   
+		<td>Watch Dogs</td>
+		</tr>
+<tr>   
+		<td>Far Cry</td>
+		</tr>
+
+
+
+<tr>
+           <td rowspan="3">EA</td>
+	   <td>FIFA</td>
+</tr>
+
+<tr>   
+		<td>Battlefield</td>
+		</tr>
+		<tr>   
+		<td>Sims 4</td>
+		</tr>
+</table>
+</body>
+</html> 
+font-size:50px;
+      margin:100px;
+	  float:left;

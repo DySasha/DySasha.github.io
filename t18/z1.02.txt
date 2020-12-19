@@ -1,0 +1,53 @@
+<html>
+<head>
+   <style>
+  #menu{
+      background:black;
+      height:75px;
+  }
+  a{
+      color:white;
+      text-decoration:none;
+  }
+  
+   #button{
+   float:left;
+   margin-left:10px;
+   margin-right:10px;
+   font-size:20px;
+   }
+   h1{
+   margin-top:50px;
+   }
+   #niz{
+      background:black;
+      height:350px;
+	  }
+   #text{
+      color:white;
+      font-size:50px;
+      margin:100px;
+	  float:left;
+   }
+   img{
+   width:340px;
+   height:340px;
+   }
+   #photo{
+   float:right;
+   }
+  
+   
+   </style>
+</head>
+<body>
+<div id="menu">
+     <div id="button"><h4><a href="">Головна</a></h4></div>
+	 <div id="button"><h4><a href="">Про себе</a></h4></div>
+</div>
+<h1 align="center">Інформація про мене</h1>
+
+
+</div>
+</body>
+</html>
