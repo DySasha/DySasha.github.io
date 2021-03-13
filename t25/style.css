@@ -1,0 +1,45 @@
+body{
+	margin:0;	
+}
+.div{
+	   height:200px;
+	   width:400px;
+	   margin-top:50px;
+      font-size:20px;
+	font-family: cursive;
+	background: linear-gradient( to right,red,pink,lime);
+	color:navy;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	transition: all 0.5s ease;
+}
+.anim5:hover{
+	transform:rotateZ(30deg);
+	margin-bottom:100px;
+	margin-top:100px;
+}
+.anim1:hover{
+	transform:rotateZ(36000000000000000000000000000000000000000000000deg);
+	margin-bottom:100px;
+	margin-top:100px;
+}
+.anim3:hover{
+	transform:scale(1.2);
+	background:black;
+	color:yellow;
+	font-family:Arial;
+}
+.anim7{
+	animation-duration:5s;
+    animation-name:anime2;
+    animation-iteration-count:infinite;
+}
+@keyframes anime2{
+	0%{transform:rotateZ(0deg);}
+	20%{transform:rotateZ(20deg);}
+	40%{transform:rotateZ(40deg);}
+	60%{transform:rotateZ(60deg);}
+	80%{transform:rotateZ(80deg);}
+	100%{transform:rotateZ(360deg);}
+}
