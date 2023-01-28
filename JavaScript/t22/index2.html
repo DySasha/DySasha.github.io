@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Тема 22</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<style>
+		.card{
+			width: 200px;
+			height: 200px;
+		}
+		.card-title{
+			font-weight: 800;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="text-center my-5">Тема 22</h1>
+	<div class="row mx-0 my-5">
+		<div class="col">
+			<label class="form-label">Кількість карток</label>
+			<input 
+            onchange="ChangeCard()"
+				type="number" 
+				class="form-control" 
+				id="cards_num" 
+				max="50"
+				min="1"
+
+				>
+		</div>
+		<!--
+		<div class="col">
+			<label class="form-label">Порядок редегування</label>
+			<input 
+				type="number" 
+				class="form-control" 
+				id="edit_order" 
+				max="50"
+				min="1"
+
+				>
+		</div>
+		-->
+		<div class="col">
+			<label class="form-label">Колір тексту</label>
+			<select onchange="ChangeColor()"  class="form-select" aria-label="Default select example" id="cards_text" >
+			  <option>black</option>
+			  <option>white</option>
+			  <option>red</option>
+			  <option>green</option>
+			  <option>blue</option>
+			</select>
+		</div>
+		<div class="col">
+			<label class="form-label">Колір фону</label>
+			<select onchange="ChangeBackColor()" class="form-select" aria-label="Default select example" id="cards_fon" >
+			  <option>transparent</option>
+			  <option>gray</option>
+			  <option>red</option>
+			  <option>green</option>
+			  <option>blue</option>
+			</select>
+		</div>
+		
+		<div class="col d-flex align-items-end">
+			<button onclick = "Clean()" class="btn btn-warning w-100">Очистити</button>
+		</div>
+		<div class="col d-flex align-items-end">
+			<button onclick = "Delete()" class="btn btn-danger w-100">Видалити</button>
+		</div>
+		
+	</div>
+	
+	<div id="cards" class="d-flex flex-wrap justify-content-around border py-4">
+	
+		<div class="card">
+		  <div class="card-body my-2">
+			<h5 class="card-title">Card 1</h5>
+		  </div>
+		</div>
+		
+		<div class="card">
+		  <div class="card-body my-2">
+			<h5 class="card-title">Card 2</h5>
+		  </div>
+		</div>
+
+	</div>
+	
+	<script src="z2.js"></script>
+</body>
+</html>
