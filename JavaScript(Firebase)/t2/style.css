@@ -1,0 +1,18 @@
+article{
+    border: 7px solid rgb(3, 229, 250);
+    padding: 45px;
+    margin: 20px;
+    background-color: rgb(252, 0, 168);
+    overflow-y: scroll;
+    font-family: fantasy;
+    font-size: 20px;
+    color: rgb(238, 255, 0);
+    max-width: 65%;
+    max-height: 265px;
+}
+article:hover{
+    box-shadow: 0px 0px 15px rgb(0, 188, 245);
+}
+body{
+    background-color: gray;
+}
