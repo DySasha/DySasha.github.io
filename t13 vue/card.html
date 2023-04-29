@@ -1,0 +1,43 @@
+<div class="card my-2">
+    <div class="row">
+        <h5 class="text-center">{{ product.name }}</h2>
+        <p class="d-flex justify-content-center mt-2">
+            <img :src="product.img" alt="">
+        </p>
+        <p class="d-flex justify-content-between">
+            <input class="form-control" type="number" v-model="product.count" @change="countTotalPrice()">
+            <span> Кількість</span>
+        </p>
+        <p class="d-flex justify-content-between">
+            <input
+                type="color"
+                class="form-control form-control-color"
+                id="exampleColorInput"
+                value="#563d7c"
+                title="Choose your color">
+            <label for="exampleColorInput" class="form-label">Колір</label>
+        </p>
+        <div class="d-flex align-items-start flex-column">
+            <p>
+                <input type="checkbox" v-model="product.preOrder" @change="countTotalPrice()"> Передзамолення (-5%) <br>
+                <small class="text-muted">Очікування 2-3 тижні</small>
+            </p>
+            <p>
+                <input type="checkbox" v-modal="product.fast" @change="countTotalPrice()"> Швидка доставка (+10%)
+            </p>
+        </div>
+        <p class="d-flex justify-content-between">
+            <span>Ціна: </span>
+            <span>{{ product.price }} $</span>
+        </p>
+        <p class="d-flex justify-content-between">
+           <span>Вартість замовлення: </span>
+           <span>{{ product.TotalPrice }}$</span>
+        </p>
+        <p class="d-flex justify-content-end">
+            <a class="btn btn-primary">Замовити</a>
+        </p>
+    </div>
+</div>
+
+
