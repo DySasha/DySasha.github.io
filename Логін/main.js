@@ -6,7 +6,11 @@ function Sing_in_by_Google(){
     .then((result) => {
      
       var user = result.user;
-      CreateUser(user.uid)
+      CreateUser(user.uid, '','','')
+      localStorage.setItem('login',user.uid)
+      setTimeout(function() {
+        window.location.href = `SPA.html?id=${user.uid}`
+      }, 3000);
     }).catch((error) => {
       var errorCode = error.code;
 
@@ -31,7 +35,10 @@ function Sing_in_by_Mail(){
     console.log(errorCode);
     console.log(errorMessage);
     CreateUser(user.uid,namei.value,lastnamep.value,agev.value)
-    window.location.href = `user.html?id=${user.uid}`
+    localStorage.setItem('login',user.uid)
+    setTimeout(function(){
+      window.location.href = `SPA.html?id=${user.uid}`
+    }, 3000);
   });
 }
 
@@ -42,7 +49,14 @@ function CreateUser(id,namei,lastnamep,agev){
             age: agev
           }
           db.collection('Reg_TestV').doc(id).set(user).then(res =>{
-            console.log('Success!')
+            console.log('Success!');
           })
 
 }
+function CheckUser() {
+  let check = localStorage.getItem('login')
+  if(check != null){
+    window.location.href = `SPA.html?id=${check}`
+  }
+}
+CheckUser()

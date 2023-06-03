@@ -1,0 +1,25 @@
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(135, 133, 133);
+    padding: 25px;
+}
+.menu_link{
+    color: black;
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+#TestApp{
+    border: 1px solid seagreen;
+    width: 96%;
+    margin: 0 auto;
+    height: 700px;
+    display: flex;
+    justify-content: space-around;
+}
+body{
+    background: url(https://static.tildacdn.com/tild6436-6463-4366-a261-373866326638/2.jpg)
+}
+
