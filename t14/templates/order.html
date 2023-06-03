@@ -1,0 +1,19 @@
+<table class="orders">
+    <thead>
+        <tr>
+        
+        <th scope="col">Фото товару</th>
+        <th scope="col">Назва товару</th>
+        <th scope="col">Ціна товару</th>
+    </tr>
+</thead>
+    <tbody>
+        <tr v-for="orders in $root.content">
+           
+            <td> <img v-bind:src="orders.img" class="picture"></td>
+            <td>{{orders.name}}</td>
+            <td>{{orders.price}}₴</td>
+          </tr>
+          
+    </tbody>
+</table>

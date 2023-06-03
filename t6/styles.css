@@ -1,0 +1,19 @@
+.box-image{
+    width: 80px;
+    height: 80px;
+    background: chartreuse;
+    margin-right: 20px;
+}
+
+
+.box-title{
+    padding: 10px;
+}
+
+.old_comment{
+    height: 150;
+    width: 99,9%;
+    border: 1px solid silver;
+    border-radius: 10px;
+    margin-top: 15px;
+}

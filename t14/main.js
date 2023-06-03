@@ -1,10 +1,13 @@
 document.addEventListener('DOMContentLoaded', async function(){
     let NotFound = await axios.get('templates/404.html');
     let home = await axios.get('templates/home.html');
+    let products = await axios.get('templates/products.html');
+    let orders = await axios.get('templates/order.html');
     
     const data = {
         test: 'Hello',
-        currentPath: window.location.hash
+        currentPath: window.location.hash,
+        content: []
           
     }
    const Home = {
@@ -13,12 +16,51 @@ document.addEventListener('DOMContentLoaded', async function(){
    const Not_Found = {
     template: NotFound.data
    } 
+
+   const Orders = {
+    template: orders.data,
+    methods: {
+        getProducts(){
+            db.collection('products').get().then( res => {
+                this.$root.content = [];
+             res.forEach( doc => {
+                let prod = doc.data();
+                prod.idefication = doc.id;
+                this.$root.content.push(prod)
+                })
+            })
+        }
+    },
+    mounted(){
+        this.getProducts();
+    }
+   }
+
+   const Products = {
+    template: products.data,
+    methods: {
+        getProducts(){
+            db.collection('products').get().then( res => {
+                this.$root.content = [];
+             res.forEach( doc => {
+                let prod = doc.data();
+                prod.idefication = doc.id;
+                this.$root.content.push(prod)
+                })
+            })
+        }
+    },
+    mounted(){
+        this.getProducts();
+    }
+   }
+
  const routes = {
     '/': Home,
-    '/NotFound': Not_Found
+    '/not-found': Not_Found,
+    '/products': Products,
+    '/orders': Orders
  }
-
-
 
 
 
@@ -27,15 +69,7 @@ const app = {
       return data
     },
     methods: {
-        getProducts(){
-            db.collection('products').get().then( res => {
-             res.forEach( doc => {
-                let prod = doc.data();
-                prod.idefication = doc.id;
-                console.log(prod);
-             })
-            })
-        }
+        
     },
     components: {
 
@@ -49,7 +83,7 @@ const app = {
         window.addEventListener('hashchange', () => {
             this.currentPath = window.location.hash;
           })
-          this.getProducts()
+          
     
     }
 }

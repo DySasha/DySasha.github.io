@@ -1,0 +1,11 @@
+
+.picture{
+    width: 300px;
+    height: 300px;
+}
+.orders{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <table class="table table-hover table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Email</th>
+            <th scope="col">Count</th>
+            <th scope="col">Total_price</th>
+            <th scope="col">Delivery</th>
+            <th scope="col">Submitted</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr>
+            <th scope="row">1</th>
+            <td>Артем</td>
+            <td>3700</td>
+            <td>DundukArtemider15@gmail.com</td>
+            <td>6</td>
+            <td>30000</td>
+            <td>Новапошта</td>
+            <td>True</td>
+            <td> <button type="button" class="btn btn-info" >Submitted</button> </td>
+            <th> <a href="mailto:test@gmail.com?subject=Order%20submited&body=Test%20body.%0AWith%20many%20text." class="btn btn-info" >Link</a> </th>
+        
+          </tr>
+        </tbody>
+      </table>
+      <script src="https://www.gstatic.com/firebasejs/6.0.0/firebase-app.js"></script>
+                 <script src="https://www.gstatic.com/firebasejs/6.0.0/firebase-firestore.js"></script>
+                 <script src="../Firebase/fb.js"></script>
+    <script src="orders.js"></script>
+</body>
+</html>
