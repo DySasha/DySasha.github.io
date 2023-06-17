@@ -13,7 +13,11 @@
 </head>
 <body>
     
-    <div class="menu">
+   
+
+    <div id="TestApp">
+
+ <div class="menu">
         <div class="menu_button btn btn-info" ><a href="#/home" 
             class="menu_link">Головна</a></div>
 
@@ -26,11 +30,13 @@
         <div class="menu_button btn btn-info"><a href="" 
             class="menu_link">Кошик</a></div>
 
-        <div class="menu_button btn btn-info"><a href="" 
+        <div class="menu_button btn btn-info"><a href="#/profile" 
             class="menu_link">Профіль</a></div>
 
-    </div>
-    <div id="TestApp">
+        <div class="menu_button btn btn-info"><button 
+            @click="SignOut" class="menu_link">Вийти</button></div>
+        </div>
+
         <component :is = "currentView"/>
     </div>
 

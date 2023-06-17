@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', async function(){
    let not_found = await axios.get('templates/404.html');
    let home =     await axios.get('templates/home.html');
    let products = await axios.get('templates/products.html');
+   let profile = await axios.get('templates/profile.html');
    
 
 
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', async function(){
                    prod.id = doc.id;
                    this.$root.content.push(prod)
                                  })
-                           this.forceUpdate();      
+                                 
                })
            }
        },
@@ -44,11 +45,20 @@ document.addEventListener('DOMContentLoaded', async function(){
            this.getProducts();
        }
    }
-       
+   const Profile = { template: profile.data,
+   methods: {
+       GetUserInformation(){
+        db.collection('Reg_TestV').doc(user_id).get().then(res => {
+            console.log(res.data())
+        })
+       }
+   },
+}
    const routes = {
        '/home': Home,
        '/not-found': NotFound,
-       '/products' : Products
+       '/products' : Products,
+       '/profile' : Profile
        
    }
 
@@ -64,7 +74,17 @@ document.addEventListener('DOMContentLoaded', async function(){
            return data
        },
        methods: {
-          
+          SignOut(){
+            firebase.auth().signOut().then(() => {
+               
+              }).catch((error) => {
+                
+              });
+              localStorage.clear('login')
+              setTimeout(function(){
+                window.location.href = `index.html`
+              }, 1000);
+          }
        },
        components: {
            
